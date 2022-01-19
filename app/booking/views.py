@@ -1,11 +1,11 @@
-from rest_framework import viewsets, mixins
+from rest_framework import viewsets
 from rest_framework.authentication import TokenAuthentication
 
 from core.models import Workplace, Booking
 from booking import serializers
 
 
-class WorkplaceViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
+class WorkplaceViewSet(viewsets.ModelViewSet):
     """Base viewset for workplace"""
     authentication_classes = (TokenAuthentication,)
     serializer_class = serializers.WorkplaceSerializer

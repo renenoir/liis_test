@@ -1,0 +1,6 @@
+.env
+.env.prod
+dump_*.sql
+__pycache__
+*.pyc
+db.sqlite3
